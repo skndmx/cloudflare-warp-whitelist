@@ -1,0 +1,11 @@
+﻿,host,description,address,whois
+0,*.github.com,Github连接使用,, 
+1,*.cnn.com,Testing Team Needs to Access CNN,, 
+2,*.google.com,google search and gmail ,, 
+3,*.office.net,微软365登录,, 
+4,*.microsoft.com,微软365登录,, 
+5,*.office.com,微软365登录,, 
+6,,New Google IP Subnets,108.59.80.0/20,Google LLC
+7,,BBC,212.58.246.0/24,BBC
+8,*.gitlab.com,Needs GitLab Access,, 
+9,*.wikipedia.org,Wikipedia Access,, 

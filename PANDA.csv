@@ -1,0 +1,8 @@
+﻿,address,description,host,whois
+0,71.0.0.0/8,Google Subnet,,"CenturyLink Communications, LLC"
+1,,Github连接使用,*.github.com, 
+2,,Testing Team Needs to Access CNN,*.cnn.com, 
+3,,google search and gmail ,*.google.com, 
+4,,微软365登录,*.office.net, 
+5,,微软365登录,*.microsoft.com, 
+6,,微软365登录,*.office.com, 
