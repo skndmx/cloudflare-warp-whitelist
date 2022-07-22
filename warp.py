@@ -7,6 +7,7 @@ from ipdata import ipdata
 from pprint import pprint
 import numpy as np
 import config
+import tokens
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -65,7 +66,7 @@ def add_whois(df):
         if pd.isnull(df.at[i,'address']):             #if address is NaN
             whois.append(" ")                           
         else:
-            ip = ipdata.IPData('866ed55eb79e153e0250cf9c662e27567c88130d9561ada99df2c6ae')      #ipdata API token
+            ip = ipdata.IPData(tokens.ipdata_token)      #ipdata API token
             removesubnet = df.at[i,'address'].split("/",1)[0]                       #remove /24 subnet mask from address
             response = ip.lookup(removesubnet)
             #pprint(response['asn']['name'])
@@ -77,7 +78,7 @@ def add_whois(df):
 def main():
     account = "9d70d5364203a143af39dd8169ef8df7"        
     api_url = "https://api.cloudflare.com/client/v4/accounts/9d70d5364203a143af39dd8169ef8df7/devices/policy/include"
-    api_token = {"Authorization": "Bearer iiufQrZhPHEZ_bwxrU0G2_rmbHXVzJGI3eBvhR_7"}
+    api_token = {"Authorization": tokens.cf_token}
     result=requests.get(api_url, headers=api_token).json()
     now = datetime.now()
     dt_string = now.strftime("%Y-%m-%d-%H-%M")                  #date-time format 2022-07-07-16-30_
